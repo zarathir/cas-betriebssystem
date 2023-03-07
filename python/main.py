@@ -9,7 +9,5 @@ if __name__ == "__main__":
 
         if op == 'NOP':
             print("Doing nothing")
-            instruction_pointer += 1
-        else:
-            instruction_pointer += 1
-            break
+        
+        instruction_pointer += 1

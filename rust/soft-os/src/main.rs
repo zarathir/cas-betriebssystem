@@ -13,7 +13,7 @@ fn main() {
         match ram[instruction_pointer] {
             Instruction::NOP => {
                 instruction_pointer = instruction_pointer + 1;
-                println!("Waiting for input");
+                println!("Doing nothing");
             }
             Instruction::BLA => {
                 instruction_pointer = instruction_pointer + 1
