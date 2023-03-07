@@ -1,10 +1,15 @@
 
-RAM = []
+if __name__ == "__main__":
+    RAM = ['NOP', 'NOP', 'BLABLA']
 
-instruction_pointer = 0
+    instruction_pointer = 0
 
-while True:
-    op = RAM[instruction_pointer]
+    while True:
+        op = RAM[instruction_pointer]
 
-    if op == 'NOP':
-        instruction_pointer += 1
+        if op == 'NOP':
+            print("Doing nothing")
+            instruction_pointer += 1
+        else:
+            instruction_pointer += 1
+            break
