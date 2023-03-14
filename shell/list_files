@@ -1,0 +1,5 @@
+#!/bin/sh
+
+dnf repoquery -l | sort | uniq > ./files_dnf
+find / | sort | uniq > ./files_rest
+diff ./files_dnf ./files_rest > ./files_diff

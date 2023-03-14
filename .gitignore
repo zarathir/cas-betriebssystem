@@ -204,4 +204,8 @@ Cargo.lock
 .history
 .ionide
 
+### Custom
+/shell/files_*
+/python/tail/logdatei
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,rust
