@@ -206,6 +206,6 @@ Cargo.lock
 
 ### Custom
 /shell/files_*
-/python/tail/logdatei
+*logdatei
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,rust
