@@ -1,0 +1,11 @@
+[package]
+name = "cas-betriebssystem"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "soft-os"
+path = "rust/soft-os/src/bin/main.rs"
+
+[workspace]
+members = ["./rust/soft-os", "./rust/tail"]

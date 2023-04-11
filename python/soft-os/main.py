@@ -1,17 +1,3 @@
-"""
-Aufgabe:
-Thread 1: CPU
-Thread 2: Interrupt Controller
-
-Interrupt schreib variable auf true und CPU liest variable und schreibt 
-diese wieder auf false
-
-Bei interrupt holt sich die CPU den nächsten Befehl, führt ihn aus und 
-fragt wieder auf interrupt ab
-
-Zustand der cpu abspeichern (programm counter) und wieder zurückschreiben
-"""
-
 import threading
 import time
 
