@@ -7,27 +7,25 @@ def ping(lock):
     global value
 
     while True:
-        if not lock.locked():
-            lock.acquire()
+        time.sleep(1)
+        if lock.acquire(blocking = False):
             if value == 'ping':
                 print(value)
                 value = 'pong'
-                lock.release()
             
-            time.sleep(1)
+            lock.release()
 
 def pong(lock):
     global value
 
     while True:
-        if not lock.locked():
-            lock.acquire()
+        time.sleep(1)
+        if lock.acquire(blocking = False):
             if value == 'pong':
                 print(value)
                 value = 'ping'
-                lock.release()
             
-            time.sleep(1)
+            lock.release()
 
 if __name__ == "__main__":
     mutex = Lock()
