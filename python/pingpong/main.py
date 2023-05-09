@@ -1,5 +1,4 @@
 from threading import Thread, Lock
-import time
 
 value = 'ping'
 
@@ -7,7 +6,6 @@ def ping(lock):
     global value
 
     while True:
-        time.sleep(1)
         if lock.acquire(blocking = False):
             if value == 'ping':
                 print(value)
@@ -19,7 +17,6 @@ def pong(lock):
     global value
 
     while True:
-        time.sleep(1)
         if lock.acquire(blocking = False):
             if value == 'pong':
                 print(value)
@@ -28,10 +25,10 @@ def pong(lock):
             lock.release()
 
 if __name__ == "__main__":
-    mutex = Lock()
+    lock = Lock()
 
-    ping_thread = Thread(target=ping, args=[mutex])
-    pong_thread = Thread(target=pong, args=[mutex])
+    ping_thread = Thread(target=ping, args=[lock])
+    pong_thread = Thread(target=pong, args=[lock])
 
     ping_thread.start()
     pong_thread.start()
